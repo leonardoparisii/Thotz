@@ -14,7 +14,7 @@
   }
 
   /* Activity */
-  .activity-card {
+  .notification-card {
     @apply flex items-center gap-2 rounded-md bg-[#101010] px-7 py-4;
   }
 
@@ -32,8 +32,8 @@
     @apply rounded-lg bg-[#165DDB] px-5 py-1.5 text-small-regular !text-light-1 !important;
   }
 
-  /* thread card  */
-  .thread-card_bar {
+  /* post card  */
+  .post-card_bar {
     @apply relative mt-2 w-0.5 grow rounded-full bg-neutral-800;
   }
 
@@ -131,7 +131,7 @@
 
 /* Tab */
 .tab {
-  @apply flex min-h-[50px] flex-1 items-center gap-3 bg-[#101010] text-light-2 data-[state=active]:bg-[#0e0e12] data-[state=active]:text-light-2 !important;
+  @apply flex min-h-[50px] flex-1 items-center gap-3 p-0 bg-[#131313] rounded-md text-light-2 data-[state=active]:bg-[#080808] data-[state=active]:text-light-2 !important;
 }
 
 .no-focus {
