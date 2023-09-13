@@ -10,7 +10,7 @@ async function Topbar() {
     if (!user) return null; // to avoid typescript warnings
 
     const userInfo = await fetchUser(user.id);
-    if (userInfo?.onboarded === false) redirect("/onboarding");
+    if (!userInfo?.onboarded) redirect("/onboarding");
     return (
         <nav className="topbar">
             <Link href='/' className="flex items-center gap-4">

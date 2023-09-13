@@ -11,7 +11,7 @@ const Search = async () => {
 
     const userInfo = await fetchUser(user.id)
 
-    if (userInfo?.onboarded === false) redirect("/onboarding");
+    if (!userInfo?.onboarded) redirect("/onboarding");
 
     const result = await fetchUsers({
         userId: user.id,

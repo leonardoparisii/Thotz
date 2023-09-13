@@ -11,7 +11,7 @@ const Notifications = async () => {
     if (!user) return null;
 
     const userInfo = await fetchUser(user.id);
-    if (userInfo?.onboarded === false) redirect("/onboarding");
+    if (!userInfo?.onboarded) redirect("/onboarding");
 
     //getNotifications
     const activity = await getNotifications(userInfo._id);

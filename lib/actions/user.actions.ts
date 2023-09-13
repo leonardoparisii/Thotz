@@ -33,7 +33,7 @@ export async function updateUser({
                 name,
                 bio,
                 image,
-                onboarder: true
+                onboarded: true
             },
             { upsert: true }
         )
