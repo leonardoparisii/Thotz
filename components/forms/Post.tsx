@@ -16,7 +16,7 @@ import { Textarea } from '../ui/textarea';
 import { usePathname, useRouter } from 'next/navigation';
 import { PostValidation } from '@/lib/validations/post';
 import { createPost } from '@/lib/actions/post.actions';
-// import { updateUser } from '@/lib/actions/user.actions';
+import { useOrganization } from '@clerk/nextjs';
 
 interface Props {
     user: {
@@ -34,6 +34,7 @@ function Post({ userId }: { userId: string}){
 
     const path = usePathname();
     const router = useRouter();
+    const { organization } = useOrganization();
     
     const form = useForm({
         resolver: zodResolver(PostValidation),
@@ -48,7 +49,7 @@ function Post({ userId }: { userId: string}){
         await createPost({
             text: values.post,
             author: userId,
-            communityId: null,
+            communityId: organization ? organization.id : null,
             path: path
         });
 
