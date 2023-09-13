@@ -7,7 +7,7 @@ interface Result {
     name: string;
     image: string;
     id: string;
-    threads: {
+    posts: {
       _id: string;
       text: string;
       parentId: string | null;
