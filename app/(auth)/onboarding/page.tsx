@@ -21,14 +21,14 @@ async function Page() {
   };
 
   return (
-    <main className='mx-auto flex min-w-[75%] flex-col justify-start px-8 py-18'>
-      <h1 className='head-text'>Onboarding</h1>
-      <p className='mt-3 text-base-regular text-light-2'>
-        Complete your profile now, to use Threds.
+    <main className="mx-auto flex min-w-[75%] flex-col justify-start px-8 py-18">
+      <h1 className="head-text">Onboarding</h1>
+      <p className="mt-3 text-base-regular text-light-2">
+        Complete your profile!
       </p>
 
-      <section className='mt-9 bg-dark-2 p-8 md:p-10'>
-        <AccountProfile user={userData} btnTitle='Continue' />
+      <section className="mt-9 bg-dark-2 p-8 md:p-10">
+        <AccountProfile user={userData} btnTitle="Continue" />
       </section>
     </main>
   );
